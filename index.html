@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Universal Weather Overlay</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="overlay-root">
+    <div class="top-bar">
+      <div class="branding">
+        <div class="brand-logo" id="brand-logo">WX</div>
+        <div class="brand-text">
+          <div class="brand-title" id="brand-title">Your Channel Name</div>
+          <div class="brand-subtitle" id="brand-subtitle">Weather · Storms · Live Coverage</div>
+        </div>
+      </div>
+      <div class="top-right">
+        <div class="clock" id="clock"></div>
+        <div class="status-pill" id="status-pill">LIVE</div>
+      </div>
+    </div>
+
+    <div class="main-row">
+      <div class="left-column">
+        <div class="info-card primary" id="info-primary">
+          <div class="info-label" id="primary-label">Current Conditions</div>
+          <div class="info-value" id="primary-value">72°</div>
+          <div class="info-detail" id="primary-detail">Mostly cloudy · Feels like 70°</div>
+        </div>
+
+        <div class="info-card" id="info-secondary">
+          <div class="info-label" id="secondary-label">Location</div>
+          <div class="info-value" id="secondary-value">Idabel, OK</div>
+          <div class="info-detail" id="secondary-detail">Change this in config.js</div>
+        </div>
+
+        <div class="info-card" id="info-tertiary">
+          <div class="info-label" id="tertiary-label">Next Update</div>
+          <div class="info-value" id="tertiary-value">Every 10 minutes</div>
+          <div class="info-detail" id="tertiary-detail">Or whatever you want to show here</div>
+        </div>
+      </div>
+
+      <div class="right-column">
+        <div class="alert-box" id="alert-box">
+          <div class="alert-header">
+            <span class="alert-tag" id="alert-tag">No Active Alerts</span>
+            <span class="alert-area" id="alert-area"></span>
+          </div>
+          <div class="alert-body" id="alert-body">
+            Use this box for warnings, key messages, sponsor text, or anything important.
+          </div>
+        </div>
+
+        <div class="bottom-ticker" id="ticker">
+          <div class="ticker-label" id="ticker-label">HEADLINES</div>
+          <div class="ticker-window">
+            <div class="ticker-track" id="ticker-track">
+              Edit OVERLAY_CONFIG.ticker.items in config.js to change this text.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
